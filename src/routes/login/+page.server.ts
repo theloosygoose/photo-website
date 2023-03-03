@@ -31,7 +31,7 @@ const login: Action = async ({ cookies, request }) => {
         path: '/',
         //server side only cookies so you can't use 'document.cookie'
         httpOnly:true,
-        secure: true,
+        secure: false,
         // only requests from the same site can send cookies
         sameSite: 'strict',
         // set cookies to expire after a month
