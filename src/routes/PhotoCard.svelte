@@ -4,7 +4,7 @@
 </script>
 
 <a data-tooltip="{img_cap}" data-placement="top" href="#">
-    <img src="https://bold-fog-8666.fly.dev{img_src}" height="200" width="300"> 
+    <img src="https://bold-fog-8666.fly.dev{img_src}" height="200" > 
 </a>
 
 
@@ -13,7 +13,8 @@
         margin: auto;
     }
     img{
-        height: 300px;
+        height: 20%;
+        width: 90%;
         object-fit: cover;
     }
 
