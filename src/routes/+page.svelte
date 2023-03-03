@@ -3,6 +3,7 @@
     import { collectionNamesstore } from "$lib/stores";
 
     export let data;
+    console.log(data);
 
     let collection_names = data.collection_names;
     let collection_photos = data.collection_photos;

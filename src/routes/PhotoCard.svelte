@@ -4,7 +4,7 @@
 </script>
 
 <a data-tooltip="{img_cap}" data-placement="top" href="#">
-    <img src="http://localhost:1337{img_src}" height="200" width="300"> 
+    <img src="https://bold-fog-8666.fly.dev{img_src}" height="200" width="300"> 
 </a>
 
 

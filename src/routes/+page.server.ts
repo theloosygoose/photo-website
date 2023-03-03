@@ -13,8 +13,8 @@ export const load: PageServerLoad = async ({ event, locals }) => {
     let collection_names = collection_data.data.map((i) => {
        return {
         id: i.id,
-        title: i.attributes.Title,
-        slug: i.attributes.slug
+        title: i.attributes.title,
+        slug: i.attributes.handle
        } 
 
     })
@@ -22,9 +22,9 @@ export const load: PageServerLoad = async ({ event, locals }) => {
     let collection_photos = collection_data.data.map((i)=> {
         return {
             collection_id: i.id,
-            collection_slug:i.attributes.slug,
-            collection_title: i.attributes.Title,
-            photos: i?.attributes?.Pages?.data?.map( (z) => {
+            collection_slug:i.attributes.handle,
+            collection_title: i.attributes.title,
+            photos: i?.attributes?.photos?.data?.map((z) => {
                 return{
                     url: z?.attributes?.url,
                     caption: z?.attributes?.caption,

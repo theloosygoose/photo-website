@@ -10,7 +10,7 @@ export const strapiLogin = async ( email:string, password:string) => {
         password: password
     }
 
-    const strapi_response = await fetch('http://localhost:1337/api/auth/local', {
+    const strapi_response = await fetch('https://bold-fog-8666.fly.dev/api/auth/local', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(body)
@@ -29,7 +29,7 @@ export const strapiVerify = async (strapiToken:string) => {
     headers.append('Authorization', `Bearer ${strapiToken}`)
 
 
-    const strapi_response = await fetch(`http://localhost:1337/api/users?filters[id][$eq]=${strapiUserId}`,{
+    const strapi_response = await fetch(`https://bold-fog-8666.fly.dev/api/users?filters[id][$eq]=${strapiUserId}`,{
         method:'GET',
         headers: headers,
     });
@@ -45,7 +45,7 @@ export const strapiGetAllCollections = async(strapiToken:string) => {
     headers.append('Authorization', `Bearer ${strapiToken}`)
 
 
-    const strapi_response = await fetch(`http://localhost:1337/api/books?populate=*`,{
+    const strapi_response = await fetch(`https://bold-fog-8666.fly.dev/api/collections?populate=*`,{
         method:'GET',
         headers: headers,
     });
@@ -60,7 +60,7 @@ export const strapiGetSingleCollection =async (strapiToken:string, slug:string) 
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', `Bearer ${strapiToken}`)
 
-    const strapi_response = await fetch(`http://localhost:1337/api/books?filters[slug][$eq]=${slug}&populate=*`,{
+    const strapi_response = await fetch(`https://bold-fog-8666.fly.dev/api/collections?filters[handle][$eq]=${slug}&populate=*`,{
         method:'GET',
         headers: headers,
     });

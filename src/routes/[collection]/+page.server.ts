@@ -16,9 +16,9 @@ export const load: PageServerLoad = async ({ params, locals }) => {
     const res_singleCollection= await strapiGetSingleCollection(locals.user.token, slug);
     const collection_data = await res_singleCollection.json()
 
-    console.log(collection_data?.data?.[0]);
+    console.log(collection_data);
 
-    const collection_photos = collection_data?.data?.[0]?.attributes?.Pages?.data?.map((i) =>{
+    const collection_photos = collection_data?.data?.[0]?.attributes?.photos?.data?.map((i) =>{
         return {
             url: i.attributes.url,
             caption: i.attributes.caption,

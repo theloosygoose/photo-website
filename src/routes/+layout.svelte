@@ -3,7 +3,7 @@
     import { collectionNamesstore } from "$lib/stores";
 
     let collection_names: any;
-    collectionNamesstore.subscribe(names => {
+    collectionNamesstore.subscribe((names: any) => {
         collection_names = names;
     })
 </script>
