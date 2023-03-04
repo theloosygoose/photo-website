@@ -3,7 +3,7 @@
     export let img_cap = "";
 </script>
 
-<a data-tooltip="{img_cap}" data-placement="top" href="#">
+<a data-tooltip="{img_cap}" data-placement="bottom" href="#">
     <img src="https://bold-fog-8666.fly.dev{img_src}" height="200" > 
 </a>
 
@@ -13,9 +13,11 @@
         margin: auto;
     }
     img{
-        height: 20%;
-        width: 90%;
+        width: 95%;
         object-fit: cover;
+    }
+    img:hover{
+        height: max-content;
     }
 
     div{
