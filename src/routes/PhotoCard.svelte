@@ -1,9 +1,11 @@
 <script lang="ts">
+    import { toggleModal } from "$lib/PhotoView/modalUtils";
+
     export let img_src: string;
     export let img_cap = "";
 </script>
 
-<a data-tooltip="{img_cap}" data-placement="bottom" href="#">
+<a on:click={ toggleModal } data-tooltip="{img_cap}" data-placement="bottom" href="#">
     <img src="https://bold-fog-8666.fly.dev{img_src}" height="200" > 
 </a>
 

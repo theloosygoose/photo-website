@@ -18,6 +18,7 @@ export const load: PageServerLoad = async ({ params, locals }) => {
 
     console.log(collection_data);
 
+
     const collection_photos = collection_data?.data?.[0]?.attributes?.photos?.data?.map((i) =>{
         return {
             url: i.attributes.url,

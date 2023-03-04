@@ -10,16 +10,17 @@
 
 <main class="container">
     <slot/>
-
 </main>
     <nav>
         <ul>
             <li><a href="/"><strong>Dad Photos</strong></a></li>
         </ul>
         <ul>
-            {#each collection_names as names}
-                <li><a href="/{names.slug}">{names.title}</a></li>
-            {/each}
+            {#if collection_names.length > 0}
+                {#each collection_names as names}
+                    <li><a href="/{names.slug}">{names.title}</a></li>
+                {/each}
+            {/if}
         </ul>
 
     </nav>
