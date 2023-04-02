@@ -34,12 +34,11 @@
         <div class="description">{current_photo.caption}</div>
         <ModalControls current_id={photo_id} {collection_length}/>
     </main>
-    
 {/if}
 
 <style>
     main{
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.94);
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -76,7 +75,8 @@
     img {
         opacity: 1;
         z-index: 100;
-        max-height: 70vh;
+        max-height: 85vh;
+        min-width: 20vw;
         margin: auto;
     }
 

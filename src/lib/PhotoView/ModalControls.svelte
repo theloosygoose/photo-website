@@ -10,6 +10,7 @@
             modalPhoto.update((i:number) => i = i + 1);
         }
     }
+
     function prevPhoto(){
         if (current_id > 0) {
             modalPhoto.update((i:number) => i = i - 1);
@@ -18,12 +19,11 @@
     modalPhoto.subscribe((i:number) => {
         console.log(i);
     })
-
 </script>
 
 <div class="container ">
-    <button on:click={prevPhoto}>Previous</button>
-    <button on:click={nextPhoto}>Next</button>
+    <button class="previous" on:click={prevPhoto}>Prev</button>
+    <button class="next" on:click={nextPhoto}>Next</button>
 </div>
 
 <style>
@@ -31,6 +31,7 @@
         display: flex;
         margin-top: 10%;
         justify-content: center;
+        z-index: 100;
     }
     button{
         width: 40%;
@@ -39,4 +40,7 @@
         border: none;
     }
 
+    button.next{
+        right: 0;
+    }
 </style>

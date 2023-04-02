@@ -18,9 +18,6 @@
         width: 95%;
         object-fit: cover;
     }
-    img:hover{
-        height: max-content;
-    }
 
     div{
         padding: 10px;
